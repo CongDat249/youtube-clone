@@ -1,0 +1,16 @@
+<div class="container mt-2">
+   <div class="row row-cols-3">
+      {{#each videos}}
+         <div class="card">
+            <img src="{{this.thumbnail}}" class="card-img-top" alt="...">
+            <div class="card-body">
+               <a href="/videos/{{this.slug}}"><h5 class="card-title">{{this.title}}</h5></a> 
+               <p class="card-text">{{this.channel}}</p>
+               <p class="card-text">
+                  <small class="text-muted">{{this.createdAt}}</small>
+               </p>
+            </div>
+         </div>
+      {{/each}}
+   </div>
+</div>
