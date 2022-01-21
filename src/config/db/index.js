@@ -1,8 +1,10 @@
 const mongoose = require('mongoose')
 
+const dbURL = 'mongodb+srv://CongDat:1234@cluster0.jnv3w.mongodb.net/acme?retryWrites=true&w=majority'
+
 async function connect() {
    try {
-      await mongoose.connect('mongodb://localhost:27017/youtube_dev')
+      await mongoose.connect(dbURL)
       console.log('Connect database successfully')
    } catch (error) {
       console.error('Error')
