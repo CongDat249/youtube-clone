@@ -11,7 +11,7 @@
   <tbody>
      {{#each videos}}
       <tr>
-         <th scope="row">1</th>
+         <th scope="row">{{sum @index 1}}</th>
          <td>{{this.title}}</td>
          <td>{{this.channel}}</td>
          <td>
@@ -20,7 +20,7 @@
             </a>
          </td>
          <td>
-            <a href="/{{this._id}}/delete" class="btn btn-danger">
+            <a href="/admin/{{this._id}}/delete" class="btn btn-danger">
                Delete
             </a>
          </td>
